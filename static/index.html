@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>表計算アプリ (Hyo-Keisan)</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="header">
         <h1>表計算アプリ</h1>
         <div class="toolbar">
             <button id="save-btn">保存</button>
+            <button id="undo-btn">元に戻す (Ctrl+Z)</button>
             <button id="load-btn">再読み込み</button>
+            <button id="clear-btn">全てクリア</button>
+            <button id="delete-row-btn" disabled>行を削除</button>
+            <button id="delete-col-btn" disabled>列を削除</button>
             <span id="status-msg"></span>
+        </div>
+        <div class="instructions">
+            <small>※ 編集後に「保存」ボタンを押してください。Excelからのコピー＆ペーストも可能です。</small>
         </div>
     </div>
     <div id="spreadsheet-container">
@@ -20,4 +29,5 @@
     </div>
     <script src="main.js"></script>
 </body>
+
 </html>
